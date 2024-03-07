@@ -55,7 +55,7 @@ body {
 }
 
 video {
-    height: 200px;
+
     position: absolute;
     top: 50%; /* Position the top of the video at the vertical center */
     left: 50%; /* Position the left side of the video at the horizontal center */
