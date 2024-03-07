@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const introText = document.querySelector('.introtext');
     const captureButton = document.querySelector('.capture-button');
-    const cameraContainer = document.getElementById('camera-container');
     const cameraFeed = document.getElementById('camera-feed');
-    const textOutput = document.getElementById('text-output');
+    const outputContainer = document.getElementById('output-container');
 
     // Initialize Tesseract.js worker
     const worker = Tesseract.createWorker({
@@ -11,45 +9,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Event listener for the capture button
-    captureButton.addEventListener('click', function () {
-        // Fade out intro text
-        introText.style.transition = 'opacity 0.5s';
-        introText.style.opacity = 0;
-
-        // Fade in camera container
-        cameraContainer.style.display = 'block';
-        cameraContainer.style.transition = 'opacity 0.5s';
-        cameraContainer.style.opacity = 1;
-
-        // Access the camera feed
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-                cameraFeed.srcObject = stream;
-                cameraFeed.onloadedmetadata = function (e) {
-                    cameraFeed.play();
-                    startTextRecognition();
-                };
-            })
-            .catch(function (err) {
-                console.error('Error accessing camera:', err);
-            });
+    captureButton.addEventListener('click', async function () {
+        try {
+            // Access the camera feed
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            cameraFeed.srcObject = stream;
+            cameraFeed.onloadedmetadata = function (e) {
+                cameraFeed.play();
+                startTextRecognition();
+            };
+        } catch (err) {
+            console.error('Error accessing camera:', err);
+        }
     });
 
     // Start text recognition process
     async function startTextRecognition() {
-        await worker.load();
-        await worker.loadLanguage('eng');
-        await worker.initialize('eng');
+        try {
+            await worker.load();
+            await worker.loadLanguage('eng');
+            await worker.initialize('eng');
 
-        setInterval(async () => {
-            const { data: { text } } = await worker.recognize(cameraFeed);
-            processText(text);
-        }, 1000); // Adjust the interval as needed
+            setInterval(async () => {
+                const { data: { text } } = await worker.recognize(cameraFeed);
+                displayText(text);
+            }, 1000); // Adjust the interval as needed
+        } catch (err) {
+            console.error('Error initializing text recognition:', err);
+        }
     }
 
-    // Process extracted text
-    function processText(text) {
-        // Output the extracted text to the website
-        textOutput.textContent = text;
+    // Display extracted text
+    function displayText(text) {
+        // Create a new paragraph element
+        const newText = document.createElement('p');
+        newText.textContent = text;
+
+        // Append the new text to the output container
+        outputContainer.appendChild(newText);
     }
 });

@@ -23,13 +23,15 @@ body {
 
 .title {
     margin: 0;
-    color: #00a3af; /* Teal color for the title */
+    margin-top: 10px;
+    font-size: small;
+    color: white; /* Teal color for the title */
 }
 
 .capture-button {
     background-color: #1a8fbf; /* Blue button background color */
     color: #ffffff; /* White button text color */
-    border:#00a3af;
+    border: none; /* Removing border */
     position: relative;
     padding: 15px 50px;
     border-radius: 50px; /* Rounded corners */
