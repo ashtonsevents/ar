@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function () {
     const captureButton = document.querySelector('.capture-button');
     const cameraFeed = document.getElementById('camera-feed');
     const textOutput = document.getElementById('text-output');
@@ -47,4 +47,4 @@ document.addEventListener('DOMContentLoaded', function () {
     function displayText(text) {
         textOutput.textContent = text;
     }
-});
+};
