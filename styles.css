@@ -62,5 +62,15 @@ video {
     transform: translate(-50%, -50%); /* Translate the video back by 50% of its own width and height to center it precisely */
 }
 
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 10px;
+    font-size: 18px;
+    pointer-events: none; /* Ensure the overlay doesn't intercept mouse events */
+}
 
 

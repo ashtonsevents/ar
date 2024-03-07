@@ -1,12 +1,12 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
     const captureButton = document.querySelector('.capture-button');
     const cameraFeed = document.getElementById('camera-feed');
     const textOutput = document.getElementById('text-output');
 
     // Event listener for the capture button
     captureButton.addEventListener('click', function () {
-        // Access the camera feed
-        navigator.mediaDevices.getUserMedia({ video: true })
+        // Access the rear-facing camera feed
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } } })
             .then(function (stream) {
                 cameraFeed.srcObject = stream;
                 cameraFeed.onloadedmetadata = function (e) {
@@ -47,4 +47,4 @@ window.onload = function () {
     function displayText(text) {
         textOutput.textContent = text;
     }
-};
+});

@@ -10,7 +10,7 @@
 <body>
     <header class="header">
         <img class="logo" src="assets/ashtonslogo.png" alt="Medication AR Logo">
-        <h1 class="title">Developed by Malachi Charach v0.0.2</h1>
+        <h1 class="title">v0.0.3</h1>
     </header>
     <div class="introtext">
         Welcome to AshtonsAR<br>
@@ -20,16 +20,13 @@
     </div>
     <div class="container" id="camera-container">
         <button class="capture-button">
-            <i class="fas fa-camera"></i> Capture
+            <i class="fas fa-camera"></i>
         </button>
         <video id="camera-feed" autoplay playsinline></video>
-    </div>
-    <div class="text-output" id="text-output">
-        <!-- Text output will be displayed here -->
+        <div class="text-overlay" id="text-overlay"></div> <!-- Text overlay -->
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.3.0/dist/tesseract.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.3.0/dist/tesseract.js"></script> <!-- Tesseract.js library -->
     <script src="script.js"></script>
-
 </body>
 </html>
