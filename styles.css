@@ -287,7 +287,7 @@ header img {
 
 .name2 {
     top: 0%;
-    left: 25vh;
+    left: 26vh;
     font-weight:500;
 }
 
@@ -296,12 +296,12 @@ header img {
     top: 15%;
     font-size: .8rem;
     font-weight: 400;
-    left: 18.5vh;
+    left: 19.5vh;
 }
 
 .connect2 {
     top: 35%;
-    left: 21.5vh;
+    left: 23vh;
     font-weight: 400;
 }
 
@@ -320,7 +320,7 @@ header img {
 
 .contact-info2 {
     top: 65%;
-    left: 20vh;
+    left: 21vh;
     line-height: 2.5vh;
     font-weight: 400;
     font-size: .9rem;
@@ -336,7 +336,7 @@ header img {
 }
 
 .download {
-    width: 17vh;
+    width: 20vh;
 }
 }
 
