@@ -1,17 +1,75 @@
 body, html {
     width: 100%;
+    margin: 0;
+    padding: 0;
     background-color: #0d485b; /* Blue background */
 }
 
 header {
+    z-index: 1;
     height: 5vh;
-    padding: 5%;
+    padding-bottom: 1vh;
     text-align: center;
+    background-color: #0b292d;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0 15px #0b292d;
+    align-items: center; /* Vertically center the content */
 }
 
 header img {
     max-width: 15vh;
-    position: relative;
+    vertical-align: middle;
+    margin: 0 auto; /* Horizontal centering using margin */
+}
+
+
+.downloadcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 13vh;
+    padding-bottom: 6vh;
+    text-wrap: nowrap;
+}
+
+.download {
+    font-family: "source-sans-pro", sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 1vh;
+    padding-left: 2vh;
+    border-radius: 50vh;
+    width: 17vh;
+    border: .3vh solid #25bcb9;
+    cursor: pointer;
+    transition: background-color, transform 0.3s;
+    /*text-decoration: underline;*/
+}
+
+.download:hover {
+    background-color: #25bcb9;
+    transform: scale(105%);
+}
+
+.fa-download {
+    margin-left: 6%;
+    padding-right: 25px;
+}
+
+
+.ourteam {
+    text-align: center;
+    font-family: "source-sans-pro", sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 1.3rem;
+    padding-bottom: 0vh;
+    /*text-decoration: underline;*/
 }
 
 /*ID CARD 1*/
@@ -48,6 +106,7 @@ header img {
     left: 5%; /* Adjust as needed */
     text-align: left;
     font-family: "Arimo", sans-serif;
+    
 }
 
 .name {
@@ -57,7 +116,7 @@ header img {
 
 .position {
     top: 15%;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 400;
 }
 
@@ -83,6 +142,7 @@ header img {
     left: 5%;
     line-height: 2.5vh;
     font-weight: 400;
+    font-size: .9rem;
 }
 
 .idcard-container .ashtonslogo2 {
@@ -138,7 +198,7 @@ header img {
 
 .position2 {
     top: 15%;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 400;
 }
 
@@ -164,6 +224,7 @@ header img {
     left: 5%;
     line-height: 2.5vh;
     font-weight: 400;
+    font-size: .9rem;
 }
 
 .idcard-container2 .ashtonslogo22 {
@@ -220,24 +281,26 @@ header img {
     left: 45%; /* Adjust as needed */
     text-align: right;
     font-family: "Arimo", sans-serif;
+    white-space: nowrap;
 }
 
 .name2 {
     top: 0%;
     left: 64%;
     font-weight:500;
-    width: 30%;
 }
+
 
 .position2 {
     top: 15%;
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 400;
+    right: 5%;
 }
 
 .connect2 {
     top: 35%;
-    left: 59%;
+    left: 56%;
     font-weight: 400;
 }
 
@@ -259,6 +322,7 @@ header img {
     left: 52%;
     line-height: 2.5vh;
     font-weight: 400;
+    font-size: .9rem;
 }
 
 .ashtonslogo22 {
@@ -269,4 +333,43 @@ header img {
     height: auto;
     margin-left: 21.5vh; /* Move image to the right */
 }
+}
+
+.transparentbox {
+    background-color: #0d485b;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+}
+
+.thankyou {
+    z-index: 1;
+    text-align: center;
+    font-family: "source-sans-pro", sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: .7rem;
+    padding-top: 1vh;
+    /*text-decoration: underline;*/
+}
+
+
+footer {
+    position: absolute; /* or position: relative; */
+    bottom: 0;
+    position: fixed;
+    color: white;
+    width: 100%; /* Ensures the footer spans the full width of its containing element */
+    background-color: #0b292d; /* Example background color */
+    padding: 5px; /* Example padding */
+    text-align: center; /* Example text alignment */
+    font-family: "Arimo", sans-serif;
+    font-size: .7rem;
+    text-decoration: none;
+    /* Other styles for your footer */
+}
+
+footer a {
+    color: inherit;
+    text-decoration: none;
 }
