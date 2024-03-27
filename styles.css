@@ -363,7 +363,7 @@ header {
 }
 
 .download {
-    width: 23vh;
+    width: 20vh;
     text-wrap: nowrap;
     flex-wrap: nowrap;
 }
