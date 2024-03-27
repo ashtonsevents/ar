@@ -107,7 +107,7 @@ header img {
     left: 5%; /* Adjust as needed */
     text-align: left;
     font-family: "Arimo", sans-serif;
-    
+    color: #0b292d;
 }
 
 .name {
@@ -190,6 +190,7 @@ header img {
     left: 5%; /* Adjust as needed */
     text-align: left;
     font-family: "Arimo", sans-serif;
+    color: #0b292d;
 }
 
 .name2 {
@@ -283,17 +284,18 @@ header img {
     text-align: right;
     font-family: "Arimo", sans-serif;
     white-space: nowrap;
+    color: #0b292d;
 }
 
 .name2 {
     top: 0%;
-    left: 26vh;
+    left: 27vh;
     font-weight:500;
 }
 
 
 .position2 {
-    top: 15%;
+    top: 4vh;
     font-size: .8rem;
     font-weight: 400;
     left: 19.5vh;
@@ -301,7 +303,7 @@ header img {
 
 .connect2 {
     top: 35%;
-    left: 23vh;
+    left: 23.5vh;
     font-weight: 400;
 }
 
@@ -336,7 +338,9 @@ header img {
 }
 
 .download {
-    width: 20vh;
+    width: 23vh;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
 }
 }
 
