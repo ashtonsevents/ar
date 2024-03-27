@@ -9,20 +9,43 @@ header {
     z-index: 1;
     height: 5vh;
     padding-bottom: 1vh;
-    text-align: center;
     background-color: #0b292d;
     display: flex;
     position: fixed;
     width: 100%;
     box-shadow: 0 0 15px #0b292d;
-    align-items: center; /* Vertically center the content */
+    color: white;
 }
 
-header img {
-    max-width: 15vh;
-    vertical-align: middle;
-    margin: 0 auto; /* Horizontal centering using margin */
+.headertitle {
+    background-color: #0b292d;
+    text-align: center;
+    box-shadow: 0 0 15px #0b292d;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5vh;
+    font-weight: 600;
+    font-size: 1.2rem;
+    font-family: "source-sans-pro", sans-serif;
 }
+
+
+.toplogo {
+    padding-top: 20vh;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Align items horizontally to the center */
+    height: auto; /* Set height of container to full viewport height */
+    width: auto;
+}
+
+.toplogo img {
+    width: 25vh; /* Adjust the width to make it smaller */
+    height: auto; /* Automatically adjust height while maintaining aspect ratio */
+}
+
 
 
 .downloadcontainer {
