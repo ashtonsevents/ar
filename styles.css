@@ -114,6 +114,7 @@ header {
     border-radius: 10px; /* optional border radius */
     display: flex;
     position: relative; /* Relative positioning for absolute child elements */
+    transition: scale 0.3s ease;
 }
 
 .idcard .profilepic {
@@ -197,6 +198,7 @@ header {
     border-radius: 10px; /* optional border radius */
     display: flex;
     position: relative; /* Relative positioning for absolute child elements */
+    transition: scale 0.3s ease;
 }
 
 .idcard2 .profilepic2 {
@@ -398,10 +400,21 @@ footer {
     font-family: "Arimo", sans-serif;
     font-size: .7rem;
     text-decoration: none;
-    /* Other styles for your footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1vh;
+    height: 2vh;
 }
+    /* Other styles for your footer */
+
 
 footer a {
     color: inherit;
     text-decoration: none;
+}
+
+
+.idcard:hover, .idcard2:hover {
+    scale: 105%;
 }
