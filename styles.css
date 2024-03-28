@@ -67,7 +67,7 @@ header {
     padding: 1vh;
     padding-left: 2vh;
     border-radius: 50vh;
-    width: 20vh;
+    width: 17vh;
     border: .3vh solid #25bcb9;
     cursor: pointer;
     text-wrap: nowrap;
@@ -363,7 +363,7 @@ header {
 }
 
 .download {
-    width: 17vh;
+    width: 19vh;
     text-wrap: nowrap;
     flex-wrap: nowrap;
 }
