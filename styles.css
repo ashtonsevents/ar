@@ -67,11 +67,12 @@ header {
     padding: 1vh;
     padding-left: 2vh;
     border-radius: 50vh;
-    width: 50%; /* Set width to 50% of the container */
-    max-width: 17vh; /* Set a maximum width for larger screens */
+    width: 17vh;
     border: .3vh solid #25bcb9;
     cursor: pointer;
+    text-wrap: nowrap;
     transition: background-color, transform 0.3s;
+    /*text-decoration: underline;*/
 }
 
 .download:hover {
@@ -83,7 +84,6 @@ header {
     margin-left: 6%;
     padding-right: 30px;
 }
-
 
 
 .ourteam {
@@ -362,7 +362,11 @@ header {
     margin-left: 21.5vh; /* Move image to the right */
 }
 
-
+.download {
+    width: 25vh;
+    text-wrap: nowrap;
+    flex-wrap: nowrap;
+}
 }
 
 .transparentbox {
