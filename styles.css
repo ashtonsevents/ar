@@ -363,9 +363,9 @@ header {
 }
 
 .download {
-    width: 22vh;
-    text-wrap: nowrap;
-    flex-wrap: nowrap;
+    width: 80vw; /* Adjust width for smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+    
 }
 }
 
